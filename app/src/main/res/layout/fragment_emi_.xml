@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".Emi_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backemi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new" />
+
+        <TextView
+            android:id="@+id/calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="EMI Calculator"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/emi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/principalamountcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/principalamountedittext"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/baseline_currency_rupee_24"
+                        android:hint="Princiaple Amount"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_1sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/interrestemicard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/interrestemiEditText"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/baseline_currency_rupee_24"
+                        android:hint="Interest (Max 50% Per Annum)"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_1sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loantenurecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/loantenureEdittext"
+
+
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/baseline_currency_rupee_24"
+                        android:hint="Loan Tenure (Max 30 YR)"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_1sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/FirstEmicard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/blue"
+                    app:cursorColor="@color/blue">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/FirstEmiEditext"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/calendar_month"
+                        android:focusable="false"
+                        android:hint="First Emi"
+                        android:inputType="numberDecimal"
+                        android:onClick="showDatePickerDialog"
+                        android:padding="@dimen/_1sdp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+
+                        android:textSize="@dimen/_15sdp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/emilayoutbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FirstEmicard"
+                tools:ignore="ExtraText,MissingConstraints">
+
+                <ImageButton
+                    android:id="@+id/calculatebuttonemi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/calculatebtn" />
+
+                <ImageButton
+                    android:id="@+id/resetbuttonemi"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/reset" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/interestemi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalinterestemi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="Total interest"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/answertotalinterestemi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:background="@color/background"
+                        android:textColor="@color/white"
+                        android:layout_margin="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@id/totalinterestemi" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totalprincipalemi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="Total Principal"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/answertotalinterestemi" />
+
+                    <EditText
+                        android:id="@+id/answertotalprincipalemi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:focusable="false"
+                        android:textColor="@color/white"
+                        android:background="@color/background"
+                        app:layout_constraintTop_toBottomOf="@id/totalprincipalemi" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalpaymentemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Total Payment"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@+id/answertotalprincipalemi" />
+
+                <EditText
+                    android:id="@+id/answertotalpaymentemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/totalpaymentemi" />
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/emimonthly"
+                android:layout_width="@dimen/_290sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loanlastdateemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:text="Emi(Monthly Payment)"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/answerloanlastdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@color/background"
+                    android:focusable="false"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/sharebuttonemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:padding="@dimen/_1sdp"
+                    android:text="Share"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/InvestmentPeriod"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/loanlastdatecard"
+                android:layout_width="@dimen/_290sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/loanlastdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:text="Loan Last Date"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/answerloanlastdateemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:focusable="false"
+                    android:textColor="@color/white"
+
+                    android:background="@color/background"
+                    app:layout_constraintTop_toBottomOf="@id/loanlastdate" />
+
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/savebuttonemi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+
+                    android:backgroundTint="@color/white"
+                    android:text="save"
+                    android:textColor="@color/background"
+                    android:textSize="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/InvestmentPeriod"
+                    tools:ignore="MissingConstraints" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

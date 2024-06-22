@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".Compare_Loan_Fragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backcompareloan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new" />
+
+        <TextView
+            android:id="@+id/calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Compare Loan"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:elevation="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#B69BF6"
+                            android:gravity="center"
+                            android:text="LOAN 1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#B69BF6"
+                            android:gravity="center"
+                            android:text="LOAN 2"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Principal Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_principal_first"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_principal_second"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="Interest"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_rate_first"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_rate_second"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="Tenure"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_term_first"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:boxBackgroundColor="#00FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                            app:boxStrokeColor="#C3C3C3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_term_second"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:backgroundTint="#0FFFFFFF"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/_1sdp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_15sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/card_border"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/tv_years"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:text="Years"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_months"
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:text="Months"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageButton
+                    android:id="@+id/btn_business_calculate"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/calculatebtn" />
+
+                <ImageButton
+                    android:id="@+id/btn_business_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/reset" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/card_border"
+                android:elevation="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="EMI"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+
+                            android:weightSum="2">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_monthlyEMI_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_monthlyEMI_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/edt_emi_differ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="Difference :"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="Total Interest"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_interest_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_interest_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/edt_interest_differ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="Difference :"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="Total Payment"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_payment_first"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                app:boxBackgroundColor="#00FFFFFF"
+                                app:boxBackgroundMode="outline"
+                                app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_5sdp"
+                                app:boxStrokeColor="#00FFFFFF">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edt_payment_second"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:backgroundTint="#0FFFFFFF"
+                                    android:clickable="false"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:inputType="none"
+                                    android:padding="@dimen/_1sdp"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15sdp" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/edt_payment_differ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="Difference :"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

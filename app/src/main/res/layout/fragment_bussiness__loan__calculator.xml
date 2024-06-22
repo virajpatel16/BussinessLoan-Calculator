@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".Bussiness_Loan_CalculatorFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/backbussiness"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new" />
+
+        <TextView
+            android:id="@+id/calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Bussiness Loan Calculator"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <ImageButton
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/arrow_back_ios_new"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="1"
+        android:rowCount="3">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/discount" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Discount Calc."
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_weight="3"
+                            android:src="@drawable/price" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Price Calculator"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/operarting" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Operating Margin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/breakevent" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Break Event Point"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_weight="3"
+                            android:src="@drawable/markup" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Markup"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/margin" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Margin"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/marginwith" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Margin With Sales"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/cumulative" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Cumlative Growth"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/inflation" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Inflation"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/saletax" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Sales Tax"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/cardview11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_weight="3"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:src="@drawable/vat" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Vat"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardview12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="63dp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center_horizontal|center"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_weight="3"
+                            android:src="@drawable/grossprofit" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:layout_width="@dimen/_137sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="bottom|center"
+                            android:backgroundTint="@color/white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Gorss Profit"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+
+                            app:strokeColor="@color/white"
+
+
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </GridLayout>
+</LinearLayout>

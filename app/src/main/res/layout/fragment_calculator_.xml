@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/black"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:weightSum="8"
+    tools:context=".Calculator_Fragment">
+
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="false"
+        android:textColor="@color/white"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:textSize="24dp"
+        android:weightSum="8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:background="@color/white">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_CE"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="CE"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_backspace"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:backgroundTint="#D4D4E1"
+                android:drawableRight="@drawable/backspace"
+
+                android:gravity="center"
+                android:onClick="onButtonClick"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_cause"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:backgroundTint="#D4D4E1"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="()"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_divide"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:backgroundTint="#FFA000"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_9"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_multiple"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="#FFA000"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="*"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_minus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="#FFA000"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_plus"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.1"
+                android:backgroundTint="#FFA000"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_0"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="2"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_point"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:backgroundTint="@color/black"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/button_equle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_weight="1.2"
+                android:backgroundTint="#FFA000"
+                android:onClick="onButtonClick"
+                android:padding="@dimen/_1sdp"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

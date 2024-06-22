@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/slapebg"
+    android:gravity="center"
+    android:paddingBottom="@dimen/_50sdp"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:src="@drawable/iconapp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/getstarted"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/robotoblackitalic"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Get Started"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_15sdp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_2sdp" />
+
+
+</LinearLayout>
